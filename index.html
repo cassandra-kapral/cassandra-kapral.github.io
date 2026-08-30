@@ -91,6 +91,15 @@
   .project-stats div span{ display:block; font-size:11px; text-transform:uppercase; color:var(--ink-soft); letter-spacing:.06em; margin-bottom:6px; }
   .project-stats div b{ font-family:var(--serif); font-size:24px; color:var(--ink); font-weight:600; }
 
+    /* ---- Read more toggle ---- */
+  .more-text{ display:none; }
+  .subpanel p.expanded .more-text{ display:inline; }
+  .read-more-btn{
+    font-family:var(--mono); font-size:12px; letter-spacing:.05em; text-transform:uppercase;
+    background:none; border:none; padding:0; color:var(--ochre); cursor:pointer;
+    text-decoration:underline; text-underline-offset:3px; margin-bottom:28px; display:inline-block;}
+  .read-more-btn:hover{ color:var(--ink); }
+
   /* ---- Resume ---- */
   .resume-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
   .resume-frame{ border:1.5px solid var(--ink); background:#fff; aspect-ratio:8.5/11; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; position:relative; }
@@ -270,6 +279,14 @@
         subPanels.forEach(p => p.classList.remove('active'));
         btn.classList.add('active');
         document.querySelector(`.subpanel[data-sub-panel="${btn.dataset.sub}"]`).classList.add('active');
+      });
+    });
+     // Read more / read less toggles
+    document.querySelectorAll('.read-more-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const desc = btn.previousElementSibling;
+        desc.classList.toggle('expanded');
+        btn.textContent = desc.classList.contains('expanded') ? 'Read less' : 'Read more';
       });
     });
   </script>
