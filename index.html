@@ -91,6 +91,13 @@
   .project-stats div span{ display:block; font-size:11px; text-transform:uppercase; color:var(--ink-soft); letter-spacing:.06em; margin-bottom:6px; }
   .project-stats div b{ font-family:var(--serif); font-size:24px; color:var(--ink); font-weight:600; }
 
+   /* ---- Project write-up (Challenge/Action/Result) ---- */
+  .project-writeup p{
+    font-size:15px; color:var(--ink-soft); max-width:600px; margin-bottom:20px;
+  }
+  .project-writeup strong{
+    color:var(--ochre); font-family:var(--serif); font-style:italic; font-weight:600;
+  }
     /* ---- Read more toggle ---- */
   .more-text{ display:none; }
   .subpanel p.expanded .more-text{ display:inline; }
@@ -155,7 +162,7 @@
   <section class="panel active" data-panel="about">
     <div class="heading"><div class="num">i.</div><h2>About Me</h2></div>
     <div class="about-body">
-      <p>I'm a fourth-year Aerospace Engineering student at the University of Virginia focused on rocket propulsion and mechanical fabrication within flight systems. My work spans CFD and OpenRocket simulation comparisons, a carbon fiber motor mount with UVA Rocketry, aerodynamics research analyzing boattail drag, a model rocket class project, and hands-on fabrication projects like a wind chime as a Fabrication Fellow. I care about rigorous technical design, and I'm looking to bring that mindset to solving complex challenges in flight and space.</p>
+      <p>I'm a fourth-year Aerospace Engineering student at the University of Virginia focused on rocket propulsion and mechanical fabrication within flight systems. My work spans CFD and OpenRocket simulation comparisons, a carbon fiber motor mount with UVA Rocketry, aerodynamics research analyzing boattail drag, a model rocket class project, and hands-on fabrication projects like a wind chime as a Fabrication Fellow. When I'm not in class, I'm probably climbing. I was president of the climbing club and now run the social side of things as social chair.</p>
       <div class="about-facts">
         <div><span>Based in</span><b>Charlottesville, VA &amp; Bay Area, CA</b></div>
         <div><span>Studying</span><b>Aerospace Engineering</b></div>
@@ -191,30 +198,36 @@
       <button class="read-more-btn">Read more</button>
       <div class="project-stats">
         <div><span>Status</span><b>In Progress</b></div>
-        <div><span>Material</span><b>Aluminum &amp; 6k, 3k, &amp; Uni Ply Carbon Fiber</b></div>
+        <div><span>Material</span><b>Aluminum &amp; 6k, 3k, Uni Ply Carbon Fiber</b></div>
         <div><span>Attempts</span><b>2+</b></div>
       </div>
     </div>
 
     <div class="subpanel" data-sub-panel="p2">
-      <div class="project-tag">Satellites</div>
-      <h3>CubeSat Attitude Determination &amp; Control</h3>
-      <p>Built a reaction-wheel ADCS simulation and hardware prototype for a 2U CubeSat, tuning PID control loops to achieve sub-degree pointing accuracy.</p>
+      <div class="project-tag">Aerodynamics</div>
+      <h3>Impact of Boattail Draft Angle in Reducing Drag</h3>
+      <div class="project-writeup">
+  <p><strong>Challenge:</strong> Rocket boattails reduce base drag, but the relationship between boattail angle and drag reduction isn't fully understood — past a certain point, increasing the angle can actually start increasing drag again. Our team needed to determine how boattail angle affects drag by comparing two geometries, 5° and 15°, testing the hypothesis that drag would decrease as boattail angle increased.</p>
+
+  <p><strong>Action:</strong> I focused on the design and fabrication side of the project, creating the CAD models for both boattail geometries and 3D printing the physical test articles used in wind tunnel testing. I also led the CFD analysis, running theoretical simulations to compare drag and flow separation behavior between the two angles. In parallel, our team tested the printed models in a wind tunnel using Particle Image Velocimetry (PIV) to visualize flow separation and measure drag differences between the two boattail angles.</p>
+
+  <p><strong>Result:</strong> Our CFD and PIV analyses both supported the original hypothesis, showing that flow separation and drag decreased as boattail angle increased. However, our wind tunnel results were inconsistent: one trial supported the hypothesis while a repeated trial contradicted it, introducing uncertainty likely tied to sting calibration errors and test article attachment effects. Weighing the higher reliability of CFD against the wind tunnel's variability, we concluded it's more likely than not that drag decreases as boattail angle increases, though the evidence wasn't strong enough to state this conclusively.</p>
+</div>
       <div class="project-stats">
-        <div><span>Pointing accuracy</span><b>±0.5°</b></div>
-        <div><span>Tool</span><b>Python</b></div>
-        <div><span>Year</span><b>2024</b></div>
+        <div><span>Instruments</span><b>Wind Tunnel, Particle Image Velocimetry (PIV)</b></div>
+        <div><span>Software</span><b>ANSYS Fluent, MATLAB, OpenRocket</b></div>
+        <div><span>Year</span><b>Spring 2026</b></div>
       </div>
     </div>
 
     <div class="subpanel" data-sub-panel="p3">
-      <div class="project-tag">Aerodynamics</div>
-      <h3>Low-Reynolds Airfoil CFD Study</h3>
-      <p>Ran a comparative CFD study of three airfoil profiles for a small UAV wing, validating simulation results against wind tunnel data.</p>
+      <div class="project-tag">Machining</div>
+      <h3>Wind-Chime</h3>
+      <p>Designed a wind chime in SolidWorks, calculating aluminum tube lengths to produce specific musical notes based on external acoustic references. Fabricated each tube through bandsaw cutting, vertical milling to face the edges, and lathe turning and sanding to a polished finish, then machined an aluminum holder with CNC-milled counterbores and waterjet-cut a brass striker and wind sail, connecting all components with nylon string.</p>
       <div class="project-stats">
-        <div><span>Drag reduction</span><b>-6%</b></div>
-        <div><span>Tool</span><b>ANSYS</b></div>
-        <div><span>Year</span><b>2024</b></div>
+        <div><span>Tools</span><b>Lathe, Vertical Mill, &amp; Water-Jet</b></div>
+        <div><span>Materials</span><b>Aluminum, Brass, Nylon</b></div>
+        <div><span>Year</span><b>2025</b></div>
       </div>
     </div>
   </section>
