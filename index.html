@@ -107,6 +107,25 @@
     text-decoration:underline; text-underline-offset:3px; margin-bottom:28px; display:inline-block;}
   .read-more-btn:hover{ color:var(--ink); }
 
+  /* ---- Project layout: text column + photo column ---- */
+.project-layout{
+  display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:start;}
+.project-photos{
+  display:grid; grid-template-columns:1fr; gap:14px;
+  position:sticky; top:96px;}
+.project-photos img{
+  width:100%; height:220px; object-fit:cover;
+  border:1px solid var(--rule); background:#e7e2d4;}
+.project-photos .photo-row{
+  display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+.project-photos .photo-row img{ height:150px; }
+.project-photos figcaption{
+  font-size:10.5px; color:var(--ink-soft); letter-spacing:.03em; margin-top:6px;}
+.project-photos figure{ margin:0; }
+@media (max-width:900px){
+  .project-layout{ grid-template-columns:1fr; }
+  .project-photos{ position:static; order:-1; }}
+  
   /* ---- Resume ---- */
   .resume-wrap{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
   .resume-frame{ border:1.5px solid var(--ink); background:#fff; aspect-ratio:8.5/11; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; position:relative; }
@@ -192,19 +211,42 @@
     </div>
 
     <div class="subpanel active" data-sub-panel="p1">
+  <div class="project-layout">
+    <!-- LEFT: text -->
+    <div>
       <div class="project-tag">Composites/Manufacturing</div>
       <h3>Carbon Fiber Motor Mount Tube</h3>
       <div class="project-writeup">
-  <p><strong>Challenge:</strong> Our team needed to manufacture a carbon fiber motor mount tube by hand-laying composite plies over a machined aluminum mandrel, requiring both precise mandrel tolerances and a reliable release process to remove the cured tube without damage.</p>
-  <p><strong>Action:</strong> I designed the mandrel in CAD and machined it from stock aluminum on a lathe to the tolerances required for the tube's inner diameter. After researching layup techniques by reaching out to other collegiate rocketry teams, we built a layup schedule combining 6k, 3k, and unidirectional carbon fiber plies with epoxy resin, then applied peel ply and shrink tape to compact the plies and control resin content during cure. When the first cured tube could not be removed from the mandrel, we isolated the issue to the mandrel-composite interface, revised the mandrel prep to include a Mylar release layer, and designed and built a new stand to support the mandrel during layup. We validated this updated process on a scaled-down aluminum test mandrel before scaling back up to the full-size version.</p>
-  <p><strong>Result:</strong> The scaled-down test released successfully, confirming the release method itself was sound, but scaling the same process to the full-size mandrel reproduced the original failure, isolating the problem to mandrel size or geometry rather than the release technique. Due to time and budget constraints, we paused further attempts for the semester; at IREC 2026, we gathered manufacturing insight from other teams' composite processes and are applying those learnings to a revised approach this semester.</p>
-</div>
+        <p><strong>Challenge:</strong> Our team needed to manufacture a carbon fiber motor mount tube by hand-laying composite plies over a machined aluminum mandrel, requiring both precise mandrel tolerances and a reliable release process to remove the cured tube without damage.</p>
+        <p><strong>Action:</strong> I designed the mandrel in CAD and machined it from stock aluminum on a lathe to the tolerances required for the tube's inner diameter. After researching layup techniques by reaching out to other collegiate rocketry teams, we built a layup schedule combining 6k, 3k, and unidirectional carbon fiber plies with epoxy resin, then applied peel ply and shrink tape to compact the plies and control resin content during cure. When the first cured tube could not be removed from the mandrel, we isolated the issue to the mandrel-composite interface, revised the mandrel prep to include a Mylar release layer, and designed and built a new stand to support the mandrel during layup. We validated this updated process on a scaled-down aluminum test mandrel before scaling back up to the full-size version.</p>
+        <p><strong>Result:</strong> The scaled-down test released successfully, confirming the release method itself was sound, but scaling the same process to the full-size mandrel reproduced the original failure, isolating the problem to mandrel size or geometry rather than the release technique. Due to time and budget constraints, we paused further attempts for the semester; at IREC 2026, we gathered manufacturing insight from other teams' composite processes and are applying those learnings to a revised approach this semester.</p>
+      </div>
       <div class="project-stats">
         <div><span>Status</span><b>In Progress</b></div>
         <div><span>Material</span><b>Aluminum &amp; 6k, 3k, Uni Ply Carbon Fiber</b></div>
         <div><span>Attempts</span><b>2+</b></div>
       </div>
     </div>
+
+    <!-- RIGHT: photos -->
+    <div class="project-photos">
+      <figure>
+        <img src="images/motor-mount-mandrel.jpg" alt="Machined aluminum mandrel on the lathe">
+        <figcaption>Machined aluminum mandrel</figcaption>
+      </figure>
+      <div class="photo-row">
+        <figure>
+          <img src="images/motor-mount-layup.jpg" alt="Carbon fiber layup with peel ply and shrink tape">
+          <figcaption>Layup with peel ply</figcaption>
+        </figure>
+        <figure>
+          <img src="images/motor-mount-stand.jpg" alt="Custom stand built for the cylindrical mandrel">
+          <figcaption>Custom mandrel stand</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="subpanel" data-sub-panel="p2">
       <div class="project-tag">Aerodynamics</div>
