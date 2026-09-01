@@ -195,8 +195,8 @@
   <section class="panel" data-panel="skills">
     <div class="heading"><div class="num">ii.</div><h2>Skills Summary</h2></div>
     <div class="skills-grid">
-      <div><h4>Design</h4><ul><li>SolidWorks</li><li>OpenRocket</li><li>AutoCad</li><li>Rhino</li></ul></div>
-      <div><h4>Analysis</h4><ul><li>MATLAB</li><li>ANSYS Fluent</li><li>ANSYS Mechancial</li><li>ANSYS Mechancial</li><li>Technical Writing</li></ul></div>
+      <div><h4>Design</h4><ul><li>SolidWorks</li><li>OpenRocket</li><li>AutoCAD</li><li>Rhino</li></ul></div>
+      <div><h4>Analysis</h4><ul><li>MATLAB</li><li>ANSYS Fluent</li><li>ANSYS Mechanical</li><li>Technical Writing</li></ul></div>
       <div><h4>Manufacturing</h4><ul><li>Composite layup</li><li>CNC Mill</li><li>3D printing</li><li>Bandsaw</li><li>Lathes</li><li>Laser Cutting</li><li>Water-Jet</li></ul></div>
     </div>
   </section>
@@ -231,31 +231,39 @@
     <!-- RIGHT: photos -->
     <div class="project-photos">
       <figure>
-        <img src="images/motor-mount-mandrel.jpg" alt="Machined aluminum mandrel on the lathe">
-        <figcaption>Machined aluminum mandrel</figcaption>
+        <img src="mandrel_drawing.jpg" alt="Machined aluminum mandrel on the lathe">
+        <figcaption>Aluminum Mandrel Drawing</figcaption>
       </figure>
       <div class="photo-row">
         <figure>
-          <img src="images/motor-mount-layup.jpg" alt="Carbon fiber layup with peel ply and shrink tape">
-          <figcaption>Layup with peel ply</figcaption>
+          <img src="pre-consolidation.jpg" alt="Carbon fiber layup with peel ply and shrink tape">
+          <figcaption>Carbon Fiber Layup</figcaption>
         </figure>
         <figure>
-          <img src="images/motor-mount-stand.jpg" alt="Custom stand built for the cylindrical mandrel">
-          <figcaption>Custom mandrel stand</figcaption>
+          <img src="failed_attempt.jpg" alt="Custom stand built for the cylindrical mandrel">
+          <figcaption>Failed Carbon Fiber Piece</figcaption>
         </figure>
       </div>
     </div>
   </div>
 </div>
 
-    <div class="subpanel" data-sub-panel="p2">
+  <div class="subpanel" data-sub-panel="p2">
+  <div class="project-layout">
+
+    <!-- LEFT: text -->
+    <div>
       <div class="project-tag">Aerodynamics</div>
       <h3>Impact of Boattail Draft Angle in Reducing Drag</h3>
+
       <div class="project-writeup">
-  <p><strong>Challenge:</strong> Rocket boattails reduce base drag, but the relationship between boattail angle and drag reduction isn't fully understood — past a certain point, increasing the angle can actually start increasing drag again. Our team needed to determine how boattail angle affects drag by comparing two geometries, 5° and 15°, testing the hypothesis that drag would decrease as boattail angle increased.</p>
-  <p><strong>Action:</strong> I focused on the design and fabrication side of the project, creating the CAD models for both boattail geometries and 3D printing the physical test articles used in wind tunnel testing. I also led the CFD analysis, running theoretical simulations to compare drag and flow separation behavior between the two angles. In parallel, our team tested the printed models in a wind tunnel using Particle Image Velocimetry (PIV) to visualize flow separation and measure drag differences between the two boattail angles.</p>
-  <p><strong>Result:</strong> Our CFD and PIV analyses both supported the original hypothesis, showing that flow separation and drag decreased as boattail angle increased. However, our wind tunnel results were inconsistent: one trial supported the hypothesis while a repeated trial contradicted it, introducing uncertainty likely tied to sting calibration errors and test article attachment effects. Weighing the higher reliability of CFD against the wind tunnel's variability, we concluded it's more likely than not that drag decreases as boattail angle increases, though the evidence wasn't strong enough to state this conclusively.</p>
-</div>
+        <p><strong>Challenge:</strong> Our team needed to determine how boattail angle affects drag by comparing two geometries, 5° and 15°, testing the hypothesis that drag would decrease as boattail angle increased.</p>
+
+        <p><strong>Action:</strong> I focused on the design and fabrication side of the project, creating the CAD models for both boattail geometries and 3D printing the physical test articles used in wind tunnel testing. I also led the CFD analysis, running theoretical simulations to compare drag and flow separation behavior between the two angles. In parallel, our team tested the printed models in a wind tunnel using Particle Image Velocimetry (PIV) to visualize flow separation and measure drag differences between the two boattail angles.</p>
+
+        <p><strong>Result:</strong> Our CFD and PIV analyses both supported the original hypothesis, showing that flow separation and drag decreased as boattail angle increased. However, our wind tunnel results were inconsistent: one trial supported the hypothesis while a repeated trial contradicted it, introducing uncertainty likely tied to sting calibration errors and test article attachment effects. Weighing the higher reliability of CFD against the wind tunnel's variability, we concluded it's more likely than not that drag decreases as boattail angle increases, though the evidence wasn't strong enough to state this conclusively.</p>
+      </div>
+
       <div class="project-stats">
         <div><span>Instruments</span><b>Wind Tunnel, Particle Image Velocimetry (PIV)</b></div>
         <div><span>Software</span><b>ANSYS Fluent, MATLAB, OpenRocket</b></div>
@@ -263,16 +271,65 @@
       </div>
     </div>
 
-    <div class="subpanel" data-sub-panel="p3">
+    <!-- RIGHT: photos -->
+    <div class="project-photos">
+      <figure>
+        <img src="CFD.png" alt="CFD Analysis">
+        <figcaption>CFD Analysis of Streamlines</figcaption>
+      </figure>
+
+      <div class="photo-row">
+        <figure>
+          <img src="boattail.png" alt="5 deg. boattail">
+          <figcaption>CAD Model of Rocket with Boattail</figcaption>
+        </figure>
+
+        <figure>
+          <img src="sting_attachment.png" alt="Hex Adaptor Attachment">
+          <figcaption>Sting Attachment for Wind Tunnel</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+   <div class="subpanel" data-sub-panel="p3">
+  <div class="project-layout">
+
+    <!-- LEFT: text -->
+    <div>
       <div class="project-tag">Machining</div>
       <h3>Wind-Chime</h3>
-      <p>Designed a wind chime in SolidWorks, calculating aluminum tube lengths to produce specific musical notes based on external acoustic references. Fabricated each tube through bandsaw cutting, vertical milling to face the edges, and lathe turning and sanding to a polished finish, then machined an aluminum holder with CNC-milled counterbores and waterjet-cut a brass striker and wind sail, connecting all components with nylon string.</p>
+
+      <p>
+        Designed a wind chime in SolidWorks, calculating aluminum tube lengths
+        to produce specific musical notes based on external acoustic references.
+        Fabricated each tube through bandsaw cutting, vertical milling to face
+        the edges, and lathe turning and sanding to a polished finish, then
+        machined an aluminum holder with CNC-milled counterbores and waterjet-cut
+        a brass striker and wind sail, connecting all components with nylon string.
+      </p>
+
       <div class="project-stats">
         <div><span>Tools</span><b>Lathe, Vertical Mill, &amp; Water-Jet</b></div>
         <div><span>Materials</span><b>Aluminum, Brass, Nylon</b></div>
         <div><span>Year</span><b>2025</b></div>
       </div>
     </div>
+
+    <!-- RIGHT: photos -->
+    <div class="project-photos">
+      <figure>
+        <img src="windchime.jpg" alt="Windchime">
+        <figcaption>Wind Chime</figcaption>
+      </figure>
+    </div>
+
+  </div>
+</div>
+
   </section>
 
   <!-- RESUME -->
@@ -303,7 +360,7 @@
       <a href="mailto:crkapral@gmail.com"><span>Email</span>crkapral@gmail.com</a>
       <a href="mailto:wup7mh@virginia.edu"><span>School Email</span>wup7mh@virginia.edu</a>
       <a href="https://linkedin.com/in/cassandra-kapral" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span>linkedin.com/in/cassandra-kapral</a>
-      <a href="#"><span>Location</span>Charlottesville, VA &amp; Bay Area, CA</div>
+      <a href="#"><span>Location</span>Charlottesville, VA &amp; Bay Area, CA</a>
     </div>
 </section>
 
