@@ -114,11 +114,19 @@
   display:grid; grid-template-columns:1fr; gap:14px;
   position:sticky; top:96px;}
 .project-photos img{
-  width:100%; height:220px; object-fit:cover;
-  border:1px solid var(--rule); background:#e7e2d4;}
+  width:100%;
+  height:auto;
+  display:block;
+  border:1px solid var(--rule);
+  background:#e7e2d4;}
 .project-photos .photo-row{
-  display:grid; grid-template-columns:1fr 1fr; gap:14px;}
-.project-photos .photo-row img{ height:150px; }
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;}
+.project-photos .photo-row img{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;}
 .project-photos figcaption{
   font-size:10.5px; color:var(--ink-soft); letter-spacing:.03em; margin-top:6px;}
 .project-photos figure{ margin:0; }
@@ -236,7 +244,7 @@
       </figure>
       <div class="photo-row">
         <figure>
-          <img src="pre-consolidation.jpg" alt="Carbon fiber layup with peel ply and shrink tape">
+          <img src="pre_consolidation.jpg" alt="Carbon fiber layup with peel ply and shrink tape">
           <figcaption>Carbon Fiber Layup</figcaption>
         </figure>
         <figure>
@@ -285,7 +293,7 @@
         </figure>
 
         <figure>
-          <img src="sting_attachment.png" alt="Hex Adaptor Attachment">
+          <img src="sting_attachemnt.png" alt="Hex Adaptor Attachment">
           <figcaption>Sting Attachment for Wind Tunnel</figcaption>
         </figure>
       </div>
